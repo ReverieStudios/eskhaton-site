@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Reverie Studios
+title: Eskhaton Larp
 email: contact@reverie.studio
 description: >- # this means to ignore newlines until "baseurl:"
-  Specializing in Nordic larp and immersive roleplay experiences.
+  A weird horror larp in April 2019.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -27,9 +27,9 @@ collections:
   staff:
     output: false
     permalink: /:collection/:name
-  events:
+  cults:
     output: true
-    permalink: /:collection/:name/index.html
+    permalink: /story/:name/index.html
 plugins:
   - jekyll-feed
 

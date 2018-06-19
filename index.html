@@ -9,51 +9,40 @@ id: home
 
 <section id = "hero">
 	<div id = "banner">
-		<img src = "i/homepage_hero.jpg" />
-		<div class = "blurb">
-			<h3>A CoG in the Machine</h3>
-			<h4>May 16, 2018</h4>
-		</div>
+		
 	</div>
 </section>
 
 <section id = "intro">
-	{% capture intro %}{% include text-intro.md %}{% endcapture %}
-	{{intro | markdownify}}
-</section>
+	<p class = "blurb">A weird horror larp where you portray the cultists worshipping elder gods, Eskhaton is your chance to join with other cultists in bringing about your version of the apocalypse...</p>
+	
+	<hr />
+	
+	<p>April 5th through the 7th, 2019 Providence, Rhode Island, USA</p>
 
-<section id = "events">
-	
-	<h2>Events</h2>
-	
-	<div class = "event-list">
-	{% assign events = site.events | sort: 'order' %}
-	{% for e in events %}
-		<div class = "event {{e.short-name}}">
-				<a href = "/events/{{e.short-name}}">
-				<img src = "{{e.thumbnail}}" />
-				<div class = "gradient"></div>
-				
-				<div class = "blurb">
-					<h3>{{e.title}}</h3>
-					{{e.blurb | markdownify}}
-				</div>
-			</a>
-		</div>	
-	{% endfor %}
-	</div>
-	
-	<div class = "more-events">
-		<p><a href = "/events/schedule/">Full Event Schedule</a></p>
-	</div>
-	
-</section>
+	<p>The apocalypse is coming and you're invited to make it happen...a larp in the genre setting of cosmiscism, Eskhaton will provide the sense that ordinary life is a thin shell over a reality that is so alien and abstract in comparison that merely contemplating it would damage the sanity of the ordinary person. This dark and mysterious event will drop you into the twilight hours of existence before the end times where you and other cultists in one of five cults worshipping a different god each are celebrating the impending apocalypse. </p>
 
-<section id = "about">
+		<p>While bringing about the end of times you will be staying at The Hilton Providence in Providence Rhode Island, and the event will be very nearby at the private Squantum Association Club! Eskhaton is an all-inclusive weekend where you will be immersed in the cultish machinations to bring about the end of the world. This one of a kind experience includes everything you could want for an unforgettable weekend. </p>
+
+		<p><strong>Lovecraftian Inspired, not Lovecraftian</strong>: in an attempt to define our material more on our own terms, Eskhaton’s setting material is inspired by Lovecraft and the Cthulhu Mythos, but are not necessarily directly related except by the theme of cosmic horror. </p>
 		
-	{% capture about %}{% include text-about.md %}{% endcapture %}
-	{{about | markdownify}}
+	<div class = "apply-now">
+		<a class = "apply-now" href = "/apply/">Apply Now</a>
+	</div>
 	
+	<ul>
+	<li>Two nights lodging at the The Hilton Providence in Providence, Rhode Island.</li>
+	<li>Full catered meals for brunch at the Hilton Providence, and dinners at Squantum Association.</li>
+	<li>Late night flatbread, coffee and tea and bar service available. </li>
+	<li>Each character is custom written and tailored to you!</li>
+	<li>Pre-game workshops for you and your cult to immerse you directly into the game. </li>
+	<li>An after-game party on Saturday night/Sunday morning.</li>
+	<li>Sunday morning debrief to help you exit the game in a healthy manner!</li>
+	<li>Plus tons of upgrade options!</li>
+	<li>Our base package starts at $875 (800 + fees), but we also have upgraded packages that include private rooms, transportation, and lots of luxurious upgrades!  A complete price list can be sent to you once you fill out our survey.</li>
+	</ul>
+
+		
 </section>
 
 {% include footer.html %}

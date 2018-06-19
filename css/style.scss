@@ -3,19 +3,22 @@
 
 // :fonts
 
-@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700|Oswald:500');
-$text-heading: Oswald, Impact, sans-serif;
+// If Cormorant is too extreme, consider Sorts Mill Goudy or Trirong (Spectral SC?)
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700|Cormorant+Unicase');
+$text-heading: 'Cormorant Unicase', serif;
 $text-main: "Lora", Georgia, serif;
 $text-aux: Arial, Verdana, Geneva, sans-serif;
 
 // :colors & deocration
 
-$color-background-main: #38383c;
-$color-text-main: #e7e7f4;
+$color-background-main: #fff;//#38383c;
+$color-text-main: #666;//#e7e7f4;
 $color-text-menu: mix($color-text-main, $color-background-main, 75);
-$color-link-main: #fff;
+$color-link-main: #000;
 $color-background-heading: #1b1b1f;
-$color-background-footer: #191919;
+$color-background-footer: #eee;
+$color-apply-background: #dd3434;
+$color-apply-foreground: #fff;
 
 // :layout
 
@@ -37,7 +40,7 @@ body {
 	font-size: 20px;
 	
 	&.page {
-		background-image: linear-gradient(180deg, mix($color-background-main, black, 35) 0px, $color-background-main 300px, $color-background-main);
+	//	background-image: linear-gradient(180deg, mix($color-background-main, black, 35) 0px, $color-background-main 300px, $color-background-main);
 	}
 }
 
@@ -58,8 +61,10 @@ nav {
 	padding: $space-gutter $space-gutter $space-gutter 0;
 	display: flex;
 	flex-direction: row-reverse;
+	background: linear-gradient(180deg, #000, #333);
+	border-bottom: 1px solid #fff;
 	
-	a.menu-toggle {
+	a.menu-toggle, a.apply-now {
 		display: inline-block;
 		padding: 0.4em 0.8em;
 		box-sizing: border-box;
@@ -74,6 +79,13 @@ nav {
 		text-transform: uppercase;
 	}
 	
+	a.apply-now {
+		background: $color-apply-background;
+		color: $color-apply-foreground;
+		font-weight: bold;
+		margin-right: 0.8em;
+	}
+	
 	ul.main {
 		display: block;
 		position: fixed;
@@ -83,7 +95,7 @@ nav {
 		top: 0;
 		z-index: 100;
 		padding: $space-gutter * 2;
-		background: mix(rgba(0, 0, 0, 0.9), $color-background-main, 50);
+		background: mix(rgba(255, 255, 255, 0.9), $color-background-main, 50);
 		font-family: $text-aux;
 		border-left: 5px solid $color-background-heading;
 		transition: right 0.5s ease-out;
@@ -103,7 +115,7 @@ nav {
 		}
 		
 		li.active a {
-			color: #fff;
+			color: #000;
 			font-weight: bold;
 		}
 		
@@ -137,51 +149,71 @@ nav {
 #masthead {
 	grid-area: masthead;
 	margin-bottom: $space-gutter;
-	width: 90vw;
+	width: 100%;
+	background: transparent url('../i/Eskhaton_masthead.jpg') center center no-repeat;
+	background-size: cover;
+	box-sizing: content-box;
+	padding: 10vw 0 5vw 0;
 	
 	h1 {
 		width: 100%;
-		height: 27vw;
 		box-sizing: border-box;
+		color: #fff;
 		
 		a {
 			display: block;
 			width: 100%;
-			height: 100%;
-			background: transparent url('../i/logo-flat-white-1600.png') center center no-repeat;
-			background-size: contain;
-			padding-left: 100%;
-			white-space: nowrap;
-			overflow: hidden;
+			
+			//padding-left: 100%;
+			//white-space: nowrap;
+			//overflow: hidden;
 			border: none;
 			box-sizing: border-box;
+			color: #fff;
 		}
+	}
+	
+	h2 {
+		font-family: $text-main;
+		font-weight: normal;
+		font-size: 90%;
+		margin: 0;
+		padding: 0 5vw;
+		color: #fff;
 	}
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $text-heading;
-	text-transform: uppercase;
+	text-align: center;
 }
 
 h2 {
-	text-align: right;
 	padding: $space-gutter / 4 $space-gutter;
 	margin-top: $space-gutter;
-	background: $color-background-heading;
-	border-top: 5px solid mix($color-background-heading, #fff, 75); 
 }
 
-h3, h4 {
-	margin-left: $space-gutter;
-}
-
-h4 {
-	padding-right: $space-gutter;
-}
 
 p {
 	font-size: 70%;
+}
+
+section > ul, section > ol {
+	margin: 0 $space-gutter 1em $space-gutter;
+	font-size: 70%;
+	
+	li {
+		margin-left: $space-gutter * 1.5;
+		margin-bottom: 0.5em;
+	}
+}
+
+hr {
+	display: relative;
+	margin: 1em 0;
+	height: 1px;
+	border: none;
+	background-image: linear-gradient(90deg, transparent 10%, $color-text-main 50%, transparent 90%);
 }
 
 a {
@@ -190,10 +222,26 @@ a {
 	border-bottom: 1px solid $color-link-main;
 }
 
-p.about-more {
+div.apply-now {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
+	margin-bottom: 1em;
+	
+	a {
+		display: inline-block;
+		position: relative;
+		font-family: $text-aux;
+		border: none;
+		color: $color-apply-foreground;
+		background: $color-apply-background;
+		border-radius: 200px;
+		padding: 0.4em 0.8em 0.4em 0.8em;
+		text-transform: uppercase;
+		flex: 0 0 auto;
+		font-weight: bold;
+	}
 }
 
 a.about-more {
@@ -228,23 +276,10 @@ a.about-more {
 
 #hero {
 	grid-area: hero;
-	margin-bottom: 1em;
 	
 	#banner {
 		width: 100%;
 		position: relative;
-		
-		&:after {
-			content: " ";
-			display: block;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent);
-			z-index: 0;
-		}
 	}
 	
 	#banner img {
@@ -323,137 +358,9 @@ $color-about-grad2: rgba(red($color-background-main), green($color-background-ma
 	}
 }
 
-p, div#masthead {
-	padding: 0 $space-gutter;
-}
-
 p {
+	padding: 0 $space-gutter;
 	margin-bottom: 0.75em;
-}
-
-.event-list .event {
-	
-	position: relative;
-	
-	.blurb {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 67vw;
-	}
-	
-	.blurb h3 {
-		margin: $space-gutter 0 0 $space-gutter;
-	}
-	
-	a {
-		border: none;
-		display: block;
-		position: relative;
-		
-		&:after {
-			content: "";
-			display: block;
-			position: absolute;
-			right: $space-gutter;
-			bottom: $space-gutter;
-			width: 7vw;
-			height: 7vw;
-			background: transparent url('../i/arrow-white-right.png');
-			background-size: contain;
-		}
-	}
-	
-	img {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: auto;
-	}
-	
-	.gradient {
-		position: absolute;
-		display: block;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-	
-	&.seance .gradient {
-		background-image: linear-gradient(90deg, black, transparent);
-	}
-	
-	&.daedalus .gradient {
-		background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.95) 75%);
-	}
-	
-	&.acog .gradient {
-		background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.75), transparent);
-	}
-	
-	&.eskhaton .gradient {
-		
-	}
-	
-	
-}
-
-#events .event.daedalus {
-	
-	h3, p {
-		color: #000;
-	}
-	
-	.blurb {
-		left: auto;
-		right: 0;
-	}
-	
-	a:after {
-		background-image: url('../i/arrow-black-right.png');
-	}
-}
-
-#events .event.eskhaton {
-	
-	.blurb {
-		left: auto;
-		right: 0;
-	}
-}
-
-#events .more-events {
-	
-	padding: 1em 0;
-	background: linear-gradient(black, #222);
-	
-	p {
-		margin: 0;
-		text-align: center;
-	}
-	
-	a {
-		color: white;
-		background: rgba(255, 255, 255, 0.2);
-		border: 1px solid white;
-		display: inline-block;
-		border-radius: 50px;
-		font-family: $text-aux;
-		padding: 8px 16px;
-	
-		&::after {
-			display: inline-block;
-			content: "_";
-			color: transparent;
-			height: 100%;
-			width: 1em;
-			margin-left: 0.5em;
-			background: transparent url('../i/arrow-white-right.png') center center no-repeat;
-			background-size: contain;
-		}
-		
-	}
 }
 
 // :footer 
@@ -464,9 +371,9 @@ footer * {
 
 footer {
 	background: $color-background-footer;
-	//background: linear-gradient(0deg, $color-background-footer, $color-about-grad2);
 	padding: $space-gutter 0;
 	grid-area: footer;
+	margin-top: 2em;
 }
 
 footer p {
@@ -683,179 +590,18 @@ section#main {
 	}
 }
 
-// :events schedule
-body#schedule {
-	
-	h2 {
-		margin-bottom: 0;
-	}
-	
-	h3 {
-		margin-top: 0.5em;
-	}
-	
-	.event {
-		margin-bottom: 2em;
-	}
-	
-	.event img {
-		width: 100%;
-		height: auto;
-		display: block;
-	}
-}
 
-.gallery {
+// :event - generic styles
+body.cult {
 	
-	margin: 20px $space-gutter;
-	display: flex;
-	flex-wrap: wrap;
-	
-	a, img {
-	    user-select: none;
-	    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-	}
-	
-	.image {
-		flex: 0 0 auto;
-		width: 50%;
-	}
-	
-	.image img {
-		width: 100%;
-		height: auto;
-		display: block;
-		
-	}
-}
-
-// :event - eskhaton
-
-body#eskhaton {
-	background: $color-background-main url('../i/events/acog_homepage.jpg') center center no-repeat;
-	background-size: cover;
-	
-	#main {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		height: 90vh;
-		
-		div.banner {
-			flex: 0 1 auto;
-			padding: $space-gutter;
-		}
-		
-		.banner h2 {
-			background: transparent;
-			text-align: center;
-			color: #fff;
-			border: none;
-			width: 100%;
-			padding: 0;
-		}
-		
-		.banner p {
-			margin: 0;
-			padding: 0;
-			text-align: center;
-			width: 100%;
-		}
-	}
-}
-
-body#eskhaton {
-	background: $color-background-main url('../i/events/eskhaton/eskhaton_square.jpg') center center no-repeat;
-	background-size: cover;
-}
-
-// :event - daedalus
-body#daedalus {
 	display: grid;
 	grid-template: 
 	"nav"
+	"masthead"
 	"main"
 	"footer";
-	grid-template-rows: auto auto 1fr;
-	min-height: 100vh;
 	
-	#main {
-		display: flex;
-		flex-direction: column;
-	}
-	
-	.banner {
-		background: black url('../i/events/daedalus/daedalus-splash.jpg') center center no-repeat;
-		background-size: cover;
-		padding: 5vw;
-		
-		h2 {
-			text-align: center;
-			color: #fff;
-			font-size: 180%;
-		}
-	}
-	
-	h2, h3, h4 {
-		margin: 0;
-		padding: 0 0 0 $space-gutter;
-		width: auto;
-		border: none;
-		background: transparent;
-	}
-	
-	h3 {
-		margin-top: 1em;
-	}
-	
-	.banner p {		
-		width: auto;
-		color: #fff;
-		padding: 0;
-	}
-}
-
-// :event - generic styles
-body#seance, body#acog {
-	
-	display: grid;
-	grid-template: 
-	"in-game-disclaimer nav"
-	"main main"
-	"footer footer";
-	
-	grid-template-columns: 1fr auto;
-		
-	#in-game-disclaimer {
-		grid-area: in-game-disclaimer;
-		font-family: $text-aux;
-		font-size: 90%;
-		padding-top: $space-gutter;
-		padding-bottom: $space-gutter;
-		
-		p.skip-link {
-			margin-bottom: 0;
-		}
-	}
-	
-	#out-of-game-disclaimer {
-		font-family: $text-aux;
-		font-size: 90%;
-	}
-	
-	nav {
-		grid-area: nav;
-		width: auto;
-		
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		
-		a.menu-toggle {
-			display: inline-block;
-			flex: 0 0 auto;
-		}
-	}
+	grid-template-columns: auto;
 	
 	#main {
 		grid-area: main;
@@ -863,6 +609,87 @@ body#seance, body#acog {
 	
 	footer {
 		grid-area: footer;
+	}
+}
+
+body.cult {
+	
+	#masthead {
+		background: black url('../i/cults/progenus_background.jpg') center bottom no-repeat;
+		background-size: cover;
+		position: relative;
+		padding-bottom: 15vw;
+	}
+	
+	#masthead a.back {
+		position: absolute;
+		display: block;
+		top: 5%;
+		left: 2%;
+		color: #fff;
+		font-family: $text-heading;
+		background: transparent url('../i/arrow-white-left.png') left center no-repeat;
+		background-size: 0.75em 0.75em;
+		padding-left: 1em;
+		border: none;
+	}
+	
+	#masthead:after {
+		content: "";
+		position: absolute;
+		bottom: -25vw;
+		left: 50%;
+		margin-left: -25vw;
+		width: 50vw;
+		height: 50vw;
+		background: transparent url('../i/cults/progenus.png') center center no-repeat;
+		background-size: contain;
+	}
+	
+	div.summary {
+		margin-top: 10vw;
+	}
+}
+
+body#seekers {
+	#masthead {
+		background-image: url('../i/cults/seekers_background.jpg');
+		padding-bottom: 18vw;
+		
+		h1 {
+			font-size: 180%;
+		}
+	}
+	
+	#masthead:after {
+		background-image: url('../i/cults/pattern_seekers.png');
+	}
+	
+	div.summary {
+		margin-top: 15vw;
+	}
+}
+
+body#extant {
+	#masthead {
+		background-image: url('../i/cults/extant_background.jpg');
+		padding-bottom: 25vw;
+		
+		h1 {
+			font-size: 180%;
+		}
+	}
+	
+	#masthead:after {
+		background-image: url('../i/cults/extant.png');
+		width: 40vw;
+		height: 40vw;
+		margin-left: -20vw;
+		bottom: -20vw;
+	}
+	
+	div.summary {
+		margin-top: 20vw;
 	}
 }
 
