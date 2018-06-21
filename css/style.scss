@@ -222,7 +222,7 @@ a {
 	border-bottom: 1px solid $color-link-main;
 }
 
-div.apply-now {
+div.apply-now, div.learn-more {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -591,8 +591,8 @@ section#main {
 }
 
 
-// :event - generic styles
-body.cult {
+// :cult styles
+body.cult, body.page {
 	
 	display: grid;
 	grid-template: 
@@ -693,134 +693,187 @@ body#extant {
 	}
 }
 
-// :event - seance
-body#seance {	
-	#in-game {
-		background: linear-gradient(#ede6c7, #fff);
-		color: #4d382b;
-		padding: $space-gutter 0;
-		margin-bottom: 1em;
+body#scions {
+	#masthead {
+		background-image: url('../i/cults/scions_background.jpg');
+		padding-bottom: 25vw;
 		
-		h2 {
-			background-color: transparent;
-			border: none;
-			font-family: $text-main;
-			margin: 0;
-			text-align: center;
-			padding: 145px 0 0 0;
-			background-image: url('../i/events/seance/ames_color.png');
-			background-position: center 10px;
-			background-repeat: no-repeat;
-			background-size: 125px 125px;
-			text-transform: none;
+		h1 {
+			font-size: 180%;
 		}
-		
-		h3 {
-			font-family: $text-main;
-			text-transform: none;
-			text-align: center;
-		}
-		
-		img {
-			float: right;
-			width: 45%;
-			height: auto;
-			box-shadow: 1px 1px 6px black;
-			margin-top: 0.25em;
-			margin-left: 10px;
-			margin-bottom: 10px;
-		}
-		
-		span.author {
-			display: block;
-			position: relative;
-			margin-left: 33%;
-			margin-top: 0.5em;
-			
-			&:before {
-				content: "\2014";
-				position: absolute;
-				left: -1em;
-				top: 0;
-			}
-		}
+	}
+	
+	#masthead:after {
+		background-image: url('../i/cults/scions.png');
+		width: 40vw;
+		height: 40vw;
+		margin-left: -20vw;
+		bottom: -20vw;
+	}
+	
+	div.summary {
+		margin-top: 20vw;
 	}
 }
 
-// :event - acog
-
-$color-letter-accent: #ed152e;
-$color-letter-text: #472529;
-body#acog {
+body#mareen {
+	#masthead {
+		background-image: url('../i/cults/mareen_background.jpg');
+		padding-bottom: 25vw;
+		
+		h1 {
+			font-size: 180%;
+		}
+	}
 	
-	#in-game {
-		background: gray url('../i/events/acog/nuke.jpg') center center no-repeat;
-		background-size: cover;
-		color: $color-letter-text;
-		padding: 20px 0 100px 0;
-		overflow: hidden;
-		margin-bottom: 1em;
-		display: flex;
-		flex-direction: row-reverse;
-		position: relative;
+	#masthead:after {
+		background-image: url('../i/cults/mareen.png');
+		width: 40vw;
+		height: 40vw;
+		margin-left: -20vw;
+		bottom: -20vw;
+	}
+	
+	div.summary {
+		margin-top: 20vw;
+	}
+}
+
+body#story {
+	div.cult-desc {
 		
-		h2, h3, p {
-			font-family: "Courier New", "Courier", monospace;
+		h4 {
+			margin-bottom: 0.5em;
 		}
 		
-		.letter {
-			
-			flex: 0 0 auto;
-			margin: 200px -10px -20px 0;
-			width: 220px;
-			padding: 20px;
-			border: 10px solid $color-letter-accent;
-			background: #f4f3ef;
-			font-size: 80%;
-			transform: rotate(10deg);
-			box-shadow: -3px -3px 11px black;
-			
-			.letter-body {
-				transform: rotate(1.5deg);
-			}
-			
-			h2, h3 {
-				background: $color-letter-accent;
-				color: #fff;
-				text-align: center;
-				border: none;
-				margin: 0;
-				padding: 0;
-			}
-			
-			h3 {
-				margin-bottom: 1em;
-			}
-			
-			p {
-				padding: 0;
-			}
-			
-			strong {
-				font-weight: normal;
-				border-bottom: 1px solid $color-letter-text;
-			}
-			
-			span {
-				color: black;
-				background: black;
-			}
+		
+		p {
+			display: flex;
+			flex-direction: column;
 		}
 		
-		.badge {
-			position: absolute;
-			bottom: -5px;
-			left: 0;
-			width: 33vw;
-			height: 52vw;
-			background: url('../i/events/acog/badge.png') center center no-repeat;
+		p:before {
+			content: "";
+			height: 150px;
+			height: 100px;
+			margin-bottom: 1em;
+		}
+		
+		&.extant p:before {
+			background: transparent url('../i/cults/extant.png') center center no-repeat;
 			background-size: contain;
-			transform: rotate(-7deg);
+			height: 125px;
+			
+		}
+		
+		&.mareen p:before {
+			background: transparent url('../i/cults/mareen.png') center center no-repeat;
+			background-size: contain;
+			height: 150px;
+		}
+		
+		&.progenus p:before {
+			background: transparent url('../i/cults/progenus.png') center center no-repeat;
+			background-size: contain;
+			height: 75px;
+		}
+		
+		&.scions p:before {
+			background: transparent url('../i/cults/scions.png') center center no-repeat;
+			background-size: contain;
+			height: 150px;
+		}
+		
+		&.seekers p:before {
+			background: transparent url('../i/cults/pattern_seekers.png') center center no-repeat;
+			background-size: contain;
+		}
+	}
+	
+	div.learn-more { 
+		
+		margin-bottom: 2em;
+	
+		a {
+			font-size: 60%;
+			padding-right: 2em;
+			background: #000 url('../i/arrow-white-right.png') right center no-repeat;
+			background-size: 1em 1em;
+			background-position: right 0.5em center;
+		}
+	}
+	
+	div.extant div.learn-more a {
+		background-color: #56976e;
+	}
+	
+	div.mareen div.learn-more a {
+		background-color: #385fba;
+	}
+	
+	div.progenus div.learn-more a {
+		background-color: #627881;
+	}
+	
+	div.scions div.learn-more a {
+		background-color: #922c1e;
+	}
+	
+	div.seekers div.learn-more a {
+		background-color: #ccaa2f;
+	}
+}
+
+body#logistics, body#team {
+	
+	section > h2, section h3 {
+		font-family: $text-main;
+		font-weight: normal;
+		font-size: 100%;
+		color: #000;
+	}
+	
+	section > h2 {
+		display: flex;
+		align-items: center;
+		
+		&:before, &:after {
+			content: "";
+			flex: 1 0 auto;
+			height: 1px;
+			background: #f00;
+		}
+		
+		&:before {
+			margin-right: 0.5em;
+			background-image: linear-gradient(-90deg, black, $color-background-main);
+		}
+		
+		&:after {
+			margin-left: 0.5em;
+			background-image: linear-gradient(90deg, black, $color-background-main);
+		}
+	}
+	
+	address {
+		font-size: 80%;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	
+	.collab {
+		img {
+			width: 33%;
+			height: auto;
+			padding: 1px;
+			border: 1px solid $color-text-main;
+			display: block;
+			float: right;
+			margin-left: 0.5em;
+		}
+		
+		h3 + p {
+			margin-top: 1em;
 		}
 	}
 }

@@ -25,21 +25,3 @@ god-mythos: |
 
   To any who are actually aware of the dire secret at the heart of ProGenus, the entire cult seems to be the most reckless pursuit of occult they have ever witnessed. Communing with and harvesting fragments of flesh from an entity outside of reality in order to clone it, consume it, and graft it into your flesh seems to be one of the most reckless things that any could possibly do. In many cases, the longer standing cults view them as the darkly comedic analog to Millenials of the occult world. Unlike generational Millennials (some of whom make up their ranks), ProGenus has a great deal of resources, and has made impressive progress within a short time. They seem to be pursuing a specific purpose, and with their recent experiments with AI, one can only ponder how it will further their goals.
 ---
-
-<div class = "summary">
-{{page.summary | markdownify}}
-</div>
-
-* * *
-
-### Diety: {{page.god-name}}
-
-{{page.god-description | markdownify}}
-
-### Cult History &amp; Description
-
-{{page.details | markdownify}}
-
-### {{page.god-name}} Mythos
-
-{{page.god-mythos | markdownify}}

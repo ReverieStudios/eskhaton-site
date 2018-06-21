@@ -33,21 +33,3 @@ god-mythos: |
   Thomas Orne spent the next 150 years in the other world with their mystics learning a more direct, primal route to their goddess and her powers. Conveying this to the other Druids via their biannual messages through the realms, the Druids began to change much of their work to unifying with existing powerful cults. This has also blossomed into more potent manifestations of the goddess’s powers. Giving some to whisper the increase in blood magic potency is another sign of her hasty return.
 
 ---
-
-<div class = "summary">
-{{page.summary | markdownify}}
-</div>
-
-* * *
-
-### Diety: {{page.god-name}}
-
-{{page.god-description | markdownify}}
-
-### Cult History &amp; Description
-
-{{page.details | markdownify}}
-
-### {{page.god-name}} Mythos
-
-{{page.god-mythos | markdownify}}

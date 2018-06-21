@@ -28,21 +28,3 @@ god-mythos: |
   What outsiders and other Cults often find most troubling about a Pattern Seeker is their synthesis of deranged causality and unswerving, ineffable purpose. Only a fellow Seeker could hope to understand why the penny on the ground on the other side of the street is perfect for their quest while the one at their feet is wrong, all wrong. What is clear to all, though, is that by retrieving the far penny rather than the near, the Seeker removes themself from the path of an oncoming bus gone out of control. Those who are new to the service of Zhahdahdahdon, or who merely dabble, stagger through their quests in lurching fits and starts of kismet. The Pattern Seekers farthest along their paths, however, are fully aware of the caustic effect their obsession has on the laws of probability (and, occasionally, physics), and make terrible use of their powers to meet the Needs they serve.
 
 ---
-
-<div class = "summary">
-{{page.summary | markdownify}}
-</div>
-
-* * *
-
-### Diety: {{page.god-name}}
-
-{{page.god-description | markdownify}}
-
-### Cult History &amp; Description
-
-{{page.details | markdownify}}
-
-### {{page.god-name}} Mythos
-
-{{page.god-mythos | markdownify}}

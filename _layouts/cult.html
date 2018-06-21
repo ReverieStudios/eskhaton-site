@@ -6,7 +6,24 @@
 {% include menu.html %}
 
 <section id = "main">
-	{{content}}
+	<div class = "summary">
+		{{page.summary | markdownify}}
+	</div>
+
+	<hr />
+
+	<h3>Diety &mdash; {{page.god-name}}</h3>
+
+	{{page.god-description | markdownify}}
+
+	<h3>Cult History &amp; Description</h3>
+
+	{{page.details | markdownify}}
+
+	<h3>{{page.god-name}} Mythos</h3>
+
+	{{page.god-mythos | markdownify}}
+
 </section>
 
 {% include footer.html %}

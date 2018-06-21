@@ -137,13 +137,13 @@ a {
   text-decoration: none;
   border-bottom: 1px solid #000; }
 
-div.apply-now {
+div.apply-now, div.learn-more {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin-bottom: 1em; }
-  div.apply-now a {
+  div.apply-now a, div.learn-more a {
     display: inline-block;
     position: relative;
     font-family: Arial, Verdana, Geneva, sans-serif;
@@ -386,13 +386,13 @@ section#main {
         background: url("../i/arrow-white-left.png") center center no-repeat;
         background-size: contain; }
 
-body.cult {
+body.cult, body.page {
   display: grid;
   grid-template: "nav" "masthead" "main" "footer";
   grid-template-columns: auto; }
-  body.cult #main {
+  body.cult #main, body.page #main {
     grid-area: main; }
-  body.cult footer {
+  body.cult footer, body.page footer {
     grid-area: footer; }
 
 body.cult #masthead {
@@ -448,96 +448,115 @@ body#extant #masthead:after {
 body#extant div.summary {
   margin-top: 20vw; }
 
-body#seance #in-game {
-  background: linear-gradient(#ede6c7, #fff);
-  color: #4d382b;
-  padding: 4vw 0;
-  margin-bottom: 1em; }
-  body#seance #in-game h2 {
-    background-color: transparent;
-    border: none;
-    font-family: "Lora", Georgia, serif;
-    margin: 0;
-    text-align: center;
-    padding: 145px 0 0 0;
-    background-image: url("../i/events/seance/ames_color.png");
-    background-position: center 10px;
-    background-repeat: no-repeat;
-    background-size: 125px 125px;
-    text-transform: none; }
-  body#seance #in-game h3 {
-    font-family: "Lora", Georgia, serif;
-    text-transform: none;
-    text-align: center; }
-  body#seance #in-game img {
-    float: right;
-    width: 45%;
-    height: auto;
-    box-shadow: 1px 1px 6px black;
-    margin-top: 0.25em;
-    margin-left: 10px;
-    margin-bottom: 10px; }
-  body#seance #in-game span.author {
-    display: block;
-    position: relative;
-    margin-left: 33%;
-    margin-top: 0.5em; }
-    body#seance #in-game span.author:before {
-      content: "\2014";
-      position: absolute;
-      left: -1em;
-      top: 0; }
+body#scions #masthead {
+  background-image: url("../i/cults/scions_background.jpg");
+  padding-bottom: 25vw; }
+  body#scions #masthead h1 {
+    font-size: 180%; }
+body#scions #masthead:after {
+  background-image: url("../i/cults/scions.png");
+  width: 40vw;
+  height: 40vw;
+  margin-left: -20vw;
+  bottom: -20vw; }
+body#scions div.summary {
+  margin-top: 20vw; }
 
-body#acog #in-game {
-  background: gray url("../i/events/acog/nuke.jpg") center center no-repeat;
-  background-size: cover;
-  color: #472529;
-  padding: 20px 0 100px 0;
-  overflow: hidden;
-  margin-bottom: 1em;
+body#mareen #masthead {
+  background-image: url("../i/cults/mareen_background.jpg");
+  padding-bottom: 25vw; }
+  body#mareen #masthead h1 {
+    font-size: 180%; }
+body#mareen #masthead:after {
+  background-image: url("../i/cults/mareen.png");
+  width: 40vw;
+  height: 40vw;
+  margin-left: -20vw;
+  bottom: -20vw; }
+body#mareen div.summary {
+  margin-top: 20vw; }
+
+body#story div.cult-desc h4 {
+  margin-bottom: 0.5em; }
+body#story div.cult-desc p {
   display: flex;
-  flex-direction: row-reverse;
-  position: relative; }
-  body#acog #in-game h2, body#acog #in-game h3, body#acog #in-game p {
-    font-family: "Courier New", "Courier", monospace; }
-  body#acog #in-game .letter {
-    flex: 0 0 auto;
-    margin: 200px -10px -20px 0;
-    width: 220px;
-    padding: 20px;
-    border: 10px solid #ed152e;
-    background: #f4f3ef;
-    font-size: 80%;
-    transform: rotate(10deg);
-    box-shadow: -3px -3px 11px black; }
-    body#acog #in-game .letter .letter-body {
-      transform: rotate(1.5deg); }
-    body#acog #in-game .letter h2, body#acog #in-game .letter h3 {
-      background: #ed152e;
-      color: #fff;
-      text-align: center;
-      border: none;
-      margin: 0;
-      padding: 0; }
-    body#acog #in-game .letter h3 {
-      margin-bottom: 1em; }
-    body#acog #in-game .letter p {
-      padding: 0; }
-    body#acog #in-game .letter strong {
-      font-weight: normal;
-      border-bottom: 1px solid #472529; }
-    body#acog #in-game .letter span {
-      color: black;
-      background: black; }
-  body#acog #in-game .badge {
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 33vw;
-    height: 52vw;
-    background: url("../i/events/acog/badge.png") center center no-repeat;
-    background-size: contain;
-    transform: rotate(-7deg); }
+  flex-direction: column; }
+body#story div.cult-desc p:before {
+  content: "";
+  height: 150px;
+  height: 100px;
+  margin-bottom: 1em; }
+body#story div.cult-desc.extant p:before {
+  background: transparent url("../i/cults/extant.png") center center no-repeat;
+  background-size: contain;
+  height: 125px; }
+body#story div.cult-desc.mareen p:before {
+  background: transparent url("../i/cults/mareen.png") center center no-repeat;
+  background-size: contain;
+  height: 150px; }
+body#story div.cult-desc.progenus p:before {
+  background: transparent url("../i/cults/progenus.png") center center no-repeat;
+  background-size: contain;
+  height: 75px; }
+body#story div.cult-desc.scions p:before {
+  background: transparent url("../i/cults/scions.png") center center no-repeat;
+  background-size: contain;
+  height: 150px; }
+body#story div.cult-desc.seekers p:before {
+  background: transparent url("../i/cults/pattern_seekers.png") center center no-repeat;
+  background-size: contain; }
+body#story div.learn-more {
+  margin-bottom: 2em; }
+  body#story div.learn-more a {
+    font-size: 60%;
+    padding-right: 2em;
+    background: #000 url("../i/arrow-white-right.png") right center no-repeat;
+    background-size: 1em 1em;
+    background-position: right 0.5em center; }
+body#story div.extant div.learn-more a {
+  background-color: #56976e; }
+body#story div.mareen div.learn-more a {
+  background-color: #385fba; }
+body#story div.progenus div.learn-more a {
+  background-color: #627881; }
+body#story div.scions div.learn-more a {
+  background-color: #922c1e; }
+body#story div.seekers div.learn-more a {
+  background-color: #ccaa2f; }
+
+body#logistics section > h2, body#logistics section h3, body#team section > h2, body#team section h3 {
+  font-family: "Lora", Georgia, serif;
+  font-weight: normal;
+  font-size: 100%;
+  color: #000; }
+body#logistics section > h2, body#team section > h2 {
+  display: flex;
+  align-items: center; }
+  body#logistics section > h2:before, body#logistics section > h2:after, body#team section > h2:before, body#team section > h2:after {
+    content: "";
+    flex: 1 0 auto;
+    height: 1px;
+    background: #f00; }
+  body#logistics section > h2:before, body#team section > h2:before {
+    margin-right: 0.5em;
+    background-image: linear-gradient(-90deg, black, #fff); }
+  body#logistics section > h2:after, body#team section > h2:after {
+    margin-left: 0.5em;
+    background-image: linear-gradient(90deg, black, #fff); }
+body#logistics address, body#team address {
+  font-size: 80%;
+  text-align: center;
+  margin-bottom: 1em; }
+body#logistics .collab img, body#team .collab img {
+  width: 33%;
+  height: auto;
+  padding: 1px;
+  border: 1px solid #666;
+  display: block;
+  float: right;
+  margin-left: 0.5em; }
+body#logistics .collab h3 + p, body#team .collab h3 + p {
+  margin-top: 1em; }
 
 @media screen and (max-width: 320px) {
   body {
