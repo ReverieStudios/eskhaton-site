@@ -1,5 +1,6 @@
 ---
 layout: cult
+title: ProGenus
 cult-name: ProGenus
 short-name: progenus
 summary: "ProGenus is a cult that is built upon the dueling certainties that the world as we know it is going to end, and that through experimentation, occult rituals, and science, they can grant themselves an edge that will allow them to survive and carve out a future as veritable demigods."

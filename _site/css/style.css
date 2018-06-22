@@ -5,14 +5,14 @@
   box-sizing: content-box; }
 
 body {
-  background: #fff;
+  background: #fff url("../i/background.png") top left;
   color: #666;
   font-family: "Lora", Georgia, serif;
   font-size: 20px; }
 
 body#home {
   display: grid;
-  grid-template: "nav" "masthead" "hero" "intro" "events" "about" "footer"; }
+  grid-template: "nav" "masthead" "main" "footer"; }
 
 nav {
   grid-area: nav;
@@ -20,7 +20,7 @@ nav {
   display: flex;
   flex-direction: row-reverse;
   background: linear-gradient(180deg, #000, #333);
-  border-bottom: 1px solid #fff; }
+  border-bottom: 1px solid #000; }
   nav a.menu-toggle, nav a.apply-now {
     display: inline-block;
     padding: 0.4em 0.8em;
@@ -35,7 +35,7 @@ nav {
     text-transform: uppercase; }
   nav a.apply-now {
     background: #dd3434;
-    color: #fff;
+    color: #fff !important;
     font-weight: bold;
     margin-right: 0.8em; }
   nav ul.main {
@@ -88,7 +88,7 @@ nav {
   background: transparent url("../i/Eskhaton_masthead.jpg") center center no-repeat;
   background-size: cover;
   box-sizing: content-box;
-  padding: 10vw 0 5vw 0; }
+  padding: 20vw 0 5vw 0; }
   #masthead h1 {
     width: 100%;
     box-sizing: border-box;
@@ -180,62 +180,6 @@ a.about-more {
     height: 15px;
     margin-left: 5px; }
 
-#hero {
-  grid-area: hero; }
-  #hero #banner {
-    width: 100%;
-    position: relative; }
-  #hero #banner img {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: relative; }
-  #hero #banner .blurb {
-    position: absolute;
-    bottom: 0;
-    left: 4vw;
-    bottom: 2vw;
-    z-index: 1; }
-  #hero h3, #hero h4 {
-    color: #fff;
-    margin-left: 0; }
-
-#intro {
-  grid-area: intro; }
-
-#events {
-  grid-area: events; }
-
-#about {
-  grid-area: about;
-  padding: 0 0 2em 0; }
-  #about h2 {
-    margin-bottom: 0.5em;
-    margin-top: 0; }
-  #about .about-links {
-    display: flex;
-    justify-content: center;
-    padding: 0 4vw;
-    margin-top: 1em; }
-    #about .about-links li {
-      flex: 0 1 auto;
-      list-style: none; }
-    #about .about-links li p {
-      padding: 0;
-      margin: 0; }
-    #about .about-links li p a {
-      margin: 0 1em 0 0;
-      padding: 0.4em 0.8em;
-      border: none;
-      background: #666;
-      color: #fff;
-      border-radius: 200px;
-      text-transform: uppercase;
-      font-size: 80%;
-      font-family: Arial, Verdana, Geneva, sans-serif; }
-    #about .about-links li:last-child p a {
-      margin: 0; }
-
 p {
   padding: 0 4vw;
   margin-bottom: 0.75em; }
@@ -244,20 +188,18 @@ footer * {
   font-family: Arial, Verdana, Geneva, sans-serif; }
 
 footer {
-  background: #eee;
+  background: #3d2b0b;
+  color: #fff;
   padding: 4vw 0;
   grid-area: footer;
   margin-top: 2em; }
+  footer a {
+    color: #fff;
+    border-color: #fff; }
 
 footer p {
   font-size: 60%;
   text-align: center; }
-
-body#about-larp, body#about-studio, body#contact, body#schedule, body#not-found {
-  min-height: 100vh;
-  display: grid;
-  grid-template: "nav" "masthead" "main" "footer";
-  grid-template-rows: auto auto auto 1fr; }
 
 section#main {
   grid-area: main; }
@@ -266,125 +208,6 @@ section#main {
     margin-top: 1em; }
     section#main h2:first-child {
       margin-top: 0; }
-  section#main blockquote {
-    border-left: 1px solid #666;
-    margin-left: 4vw;
-    padding-left: 4vw;
-    padding-right: 4vw;
-    margin-bottom: 1.5em; }
-    section#main blockquote p {
-      padding-left: 0;
-      padding-right: 0; }
-
-#about-studio footer, #contact footer, #schedule footer, #seance footer, #acog footer, #not-found footer {
-  margin-top: 1em; }
-
-#principals .staff {
-  display: grid;
-  grid-template: "name-title contact" "image image" "content content";
-  grid-template-columns: 1fr auto; }
-  #principals .staff .name-title {
-    grid-area: name-title; }
-  #principals .staff .contact {
-    grid-area: contact;
-    margin-right: 4vw;
-    font-size: 60%; }
-    #principals .staff .contact a {
-      border: none;
-      display: inline-block;
-      font-family: Arial, Verdana, Geneva, sans-serif; }
-    #principals .staff .contact .email, #principals .staff .contact .twitter {
-      position: relative;
-      padding-top: 0.25em;
-      padding-left: 18px; }
-    #principals .staff .contact .email {
-      background: transparent url("../i/email-icon.png") left center no-repeat;
-      background-size: 15px 10px;
-      background-position: 0px 7px; }
-    #principals .staff .contact .twitter {
-      background: transparent url("../i/twitter-icon.png") left center no-repeat;
-      background-size: 12px 10px;
-      background-position: 0px 7px; }
-  #principals .staff .image {
-    grid-area: image; }
-  #principals .staff .content {
-    grid-area: content; }
-
-.staff {
-  margin-bottom: 1em; }
-
-.staff h4 {
-  margin-left: 4vw;
-  margin-bottom: 0.5em; }
-
-.staff .image {
-  margin: 0 4vw 0.5em 4vw; }
-  .staff .image img {
-    display: block;
-    width: calc(100% - 4px);
-    height: auto;
-    padding: 1px;
-    background: black;
-    border: 1px solid white;
-    box-sizing: content-box; }
-
-#out-of-game ul, ol {
-  margin: 0 4vw 1em 4vw;
-  font-size: 70%; }
-  #out-of-game ul li, ol li {
-    margin-left: 20px; }
-
-#lightbox {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  left: 100vw;
-  top: 0;
-  background: black;
-  background: rgba(0, 0, 0, 0.9);
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
-  #lightbox #controls, #lightbox .content, #lightbox .caption {
-    flex: 0 0 auto;
-    margin-bottom: 10px; }
-  #lightbox.active {
-    left: 0; }
-  #lightbox .content {
-    background: transparent;
-    max-height: 75%; }
-  #lightbox #controls {
-    display: flex;
-    justify-content: center; }
-    #lightbox #controls a {
-      flex: 0 0 auto;
-      position: relative;
-      width: 10vw;
-      height: 10vw;
-      display: block;
-      overflow: hidden;
-      border: none;
-      margin-left: 5vw;
-      text-indent: 100%; }
-      #lightbox #controls a:first-child {
-        margin-left: 0; }
-      #lightbox #controls a:before {
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%; }
-      #lightbox #controls a.close:before {
-        background: url("../i/close-white.png") center center no-repeat;
-        background-size: contain; }
-      #lightbox #controls a.next:before {
-        background: url("../i/arrow-white-right.png") center center no-repeat;
-        background-size: contain; }
-      #lightbox #controls a.prev:before {
-        background: url("../i/arrow-white-left.png") center center no-repeat;
-        background-size: contain; }
 
 body.cult, body.page {
   display: grid;
@@ -524,25 +347,30 @@ body#story div.scions div.learn-more a {
 body#story div.seekers div.learn-more a {
   background-color: #ccaa2f; }
 
-body#logistics section > h2, body#logistics section h3, body#team section > h2, body#team section h3 {
+body#logistics section h3, body#team section h3 {
   font-family: "Lora", Georgia, serif;
   font-weight: normal;
   font-size: 100%;
   color: #000; }
-body#logistics section > h2, body#team section > h2 {
+body#logistics section > h3, body#team section > h3 {
   display: flex;
-  align-items: center; }
-  body#logistics section > h2:before, body#logistics section > h2:after, body#team section > h2:before, body#team section > h2:after {
+  align-items: center;
+  margin-bottom: 0.5em; }
+  body#logistics section > h3:before, body#logistics section > h3:after, body#team section > h3:before, body#team section > h3:after {
     content: "";
     flex: 1 0 auto;
     height: 1px;
     background: #f00; }
-  body#logistics section > h2:before, body#team section > h2:before {
+  body#logistics section > h3:before, body#team section > h3:before {
     margin-right: 0.5em;
     background-image: linear-gradient(-90deg, black, #fff); }
-  body#logistics section > h2:after, body#team section > h2:after {
+  body#logistics section > h3:after, body#team section > h3:after {
     margin-left: 0.5em;
     background-image: linear-gradient(90deg, black, #fff); }
+body#logistics h4, body#team h4 {
+  margin-bottom: 0.5em;
+  font-family: "Lora", Georgia, serif;
+  font-weight: normal; }
 body#logistics address, body#team address {
   font-size: 80%;
   text-align: center;
@@ -569,399 +397,135 @@ body#logistics .collab h3 + p, body#team .collab h3 + p {
     width: 300px; } }
 @media screen and (min-width: 600px) {
   body {
-    font-size: 25px; }
-
-  #masthead h1 {
-    height: 16.4vw; }
-
-  #masthead h1 a {
-    width: 100%;
-    background: transparent url("../i/logo-white-single-line.png") center center no-repeat;
-    background-size: contain; }
-
-  nav {
-    padding-bottom: 0; }
-    nav ul {
-      width: auto !important; }
-
-  #seance nav, #acog nav, #daedalus nav {
-    padding-top: 0; }
-
-  .event-list {
-    display: flex;
-    flex-wrap: wrap; }
-    .event-list .event {
-      flex: 0 0 50%; }
-    .event-list .event a:after {
-      width: 4vw;
-      height: 4vw; }
-    .event-list .event .blurb {
-      width: 100%;
-      font-size: 75%; }
-    .event-list .event img {
-      width: 100%; }
-    .event-list .event.seance .gradient {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)); }
-    .event-list .event.daedalus .gradient {
-      background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.85) 50%); }
-    .event-list .event.acog .gradient {
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75), transparent); }
-
-  body#schedule h2 {
-    margin-bottom: 1em; }
-  body#schedule .upcoming-events .event, body#schedule .past-events .event {
-    display: flex;
-    flex-direction: row-reverse;
-    margin-left: 20px;
-    margin-right: 20px; }
-    body#schedule .upcoming-events .event h3, body#schedule .past-events .event h3 {
-      margin-top: -0.25em; }
-    body#schedule .upcoming-events .event .image, body#schedule .upcoming-events .event .content, body#schedule .past-events .event .image, body#schedule .past-events .event .content {
-      flex: 0 0 50%; }
-    body#schedule .upcoming-events .event .image img, body#schedule .past-events .event .image img {
-      padding: 1px;
-      background: black;
-      border: 1px solid white;
-      box-sizing: border-box; }
-    body#schedule .upcoming-events .event .content, body#schedule .past-events .event .content {
-      font-size: 90%;
-      padding-right: 20px;
-      box-sizing: border-box; }
-
-  #about-studio #principals .staff {
-    grid-template: "name-title name-title" "image content" "contact content";
-    grid-template-rows: auto 250px 1fr;
-    grid-template-columns: 250px 1fr;
-    grid-column-gap: 2vw;
-    margin: 0 4vw; }
-    #about-studio #principals .staff h3, #about-studio #principals .staff h4 {
-      margin-left: 0; }
-    #about-studio #principals .staff .image {
-      margin: 0; }
-    #about-studio #principals .staff .content p {
-      padding: 0; }
-    #about-studio #principals .staff .contact {
-      margin-top: 2vw; }
-
-  body#daedalus .banner {
-    width: 100%;
-    padding: 1em 0 2em 0; }
-  body#daedalus .banner p {
-    width: 80%;
-    margin: 0 auto; }
-
-  #lightbox #controls a {
-    width: 5vw;
-    height: 5vw; } }
+    font-size: 25px; } }
 @media screen and (min-width: 768px) {
-  #main h3 {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto; }
-
-  #main p, #main ol, #main ul {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto; }
-
-  section#main blockquote {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.5em 0 0.5em 1em;
-    box-sizing: border-box; }
-    section#main blockquote p {
-      width: auto;
-      margin-left: 0;
-      margin-right: 0; }
-
-  #main .staff p {
-    width: auto;
-    margin-left: 0;
-    margin-right: 0; }
-
-  div#collaborators {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto; }
-    div#collaborators h3 {
-      margin: 0; }
-    div#collaborators p {
-      margin-left: 0;
-      margin-right: 0;
-      padding-left: 0;
-      padding-right: 0; }
-
-  #home #banner, #home section > p, #home section > h3, #home section > h4 {
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0; }
-  #home .event-list .event .blurb {
-    font-size: 95%; }
-    #home .event-list .event .blurb h3 {
-      margin-top: 0.5em; }
-
-  #schedule .upcoming-events p, #schedule .upcoming-events h3, #schedule .upcoming-events h4, #schedule .past-events p, #schedule .past-events h3, #schedule .past-events h4 {
-    width: 100%;
-    padding: 0;
-    margin-left: 0; }
-  #schedule .upcoming-events .event, #schedule .past-events .event {
-    padding-left: 20px;
-    box-sizing: border-box; }
-
-  #main div.past-runs h3 {
-    margin-left: 4vw; }
-
-  #acog #in-game .letter h2, #acog #in-game .letter h3, #acog #in-game .letter p {
-    width: auto; }
-
-  body#acog #in-game .letter {
-    margin-top: 0;
-    margin-bottom: 300px; }
-
-  body#acog #in-game .badge {
-    right: 380px;
-    width: 200px;
-    top: 50px;
-    bottom: inherit;
-    left: auto; }
-
-  body#daedalus h3 {
-    padding-left: 0; } }
+  section#main {
+    width: 660px;
+    margin: 0 auto; }
+    section#main p {
+      padding: 0; }
+    section#main ul, section#main ol {
+      margin: 0; } }
 @media screen and (min-width: 1025px) {
   body {
-    font-size: 40px; }
+    font-size: 30px; }
+
+  body.cult #masthead {
+    padding-top: 150px; }
 
   nav {
-    font-size: 24px; }
-
-  h2 {
-    background: transparent;
-    text-align: left;
-    padding: 0;
-    border: none; }
-
-  body#schedule, body#about-studio, body#about-larp, body#contact, body#not-found {
-    display: grid;
-    grid-template: ". masthead nav ." ". main main ." "footer footer footer footer";
-    grid-template-columns: 1fr 470px 470px 1fr;
-    grid-template-rows: fit-content(200px) auto 1fr;
-    grid-column-gap: 20px; }
-
-  body#home {
-    display: grid;
-    grid-template: ". masthead nav ." ". hero hero ." ". intro intro ." ". events events ." "about about about about" "footer footer footer footer";
-    grid-template-columns: 1fr 470px 470px 1fr;
-    grid-column-gap: 20px; }
-    body#home #banner {
-      width: auto; }
-    body#home #banner .blurb {
-      left: 20px;
-      bottom: 20px; }
-    body#home section > p, body#home section > h4 {
-      width: auto;
-      padding-left: 0;
-      padding-right: 0; }
-    body#home section#events {
-      font-size: 80%; }
-      body#home section#events h2 {
-        margin: 0; }
-      body#home section#events .event {
-        margin-right: 20px;
-        margin-bottom: 20px;
-        flex: 0 0 470px;
-        padding: 1px;
-        box-sizing: border-box;
-        border: 1px solid #8c8c8c;
-        background: #000; }
-      body#home section#events .event:nth-child(even) {
-        margin-right: 0; }
-      body#home section#events .event-list .event a:after {
-        width: 40px;
-        height: 40px;
-        bottom: 20px;
-        right: 20px; }
-      body#home section#events .event .blurb h3 {
-        margin: 20px 20px 0 20px; }
-      body#home section#events .event .blurb p {
-        margin: 0 20px 0 20px;
-        padding: 0; }
-    body#home section#about h2, body#home section#about h3, body#home section#about > p {
-      width: 960px;
-      margin-left: auto;
-      margin-right: auto; }
-    body#home section#about h2 {
-      margin-bottom: 0; }
-    body#home .more-events {
-      background: transparent; }
-
-  body.page {
-    padding: 60px 0 0 0; }
-    body.page #masthead {
-      width: auto;
-      padding: 0;
-      margin: 0; }
-    body.page #masthead h1 a {
-      background-image: url("../i/logo-flat-white-1600.png"); }
-
-  body.page nav {
-    padding: 0;
-    margin: 0;
-    align-self: center; }
-    body.page nav a.menu-toggle, body.page nav ul.main li.menu-toggle {
+    font-size: 90%;
+    padding: 0 0; }
+    nav a.menu-toggle, nav ul.main li.menu-toggle, nav > a.apply-now {
       display: none; }
-    body.page nav ul.main {
+    nav ul.main {
       position: relative;
       height: auto;
       right: auto;
       padding: 0;
       display: flex;
       background: transparent;
-      border: none; }
-      body.page nav ul.main.closed {
+      border: none;
+      justify-content: center; }
+      nav ul.main.closed {
         right: auto;
         left: 0;
         width: 100%; }
-      body.page nav ul.main li {
-        flex: 0 0 auto;
+      nav ul.main li {
+        flex: 0 1 auto;
         margin-right: 20px;
+        margin-bottom: 0;
         position: relative;
-        padding: 0.5em 0.5em; }
-        body.page nav ul.main li.home {
-          margin-left: 20px; }
-    body.page nav ul.main li > ul {
+        padding: 0.5em 0.25em 0.5em 0.25em; }
+        nav ul.main li.active a {
+          color: #fff; }
+      nav ul.main li.apply {
+        padding-right: 0; }
+        nav ul.main li.apply a {
+          margin-right: 0; }
+    nav ul.main li > ul {
       display: none;
       border: none; }
-      body.page nav ul.main li > ul li {
-        margin: 0; }
-      body.page nav ul.main li > ul li:hover {
+      nav ul.main li > ul li {
+        margin: 0;
+        padding: 0.5em 1em; }
+      nav ul.main li > ul li:hover {
         background: rgba(0, 0, 0, 0.3); }
-    body.page nav ul.main li:hover {
-      background: #494951; }
-    body.page nav ul.main li:hover > ul {
+    nav ul.main li:hover {
+      background: #494949; }
+    nav ul.main li.apply:hover {
+      background: transparent; }
+    nav ul.main li:hover > ul {
       display: block;
       position: absolute;
       top: 100%;
       left: 0;
       margin: 0;
       padding: 0;
-      width: 200px !important;
-      background: #494951;
-      font-size: 80%; }
-      body.page nav ul.main li:hover > ul:hover {
+      width: 300px !important;
+      background: #494949;
+      font-size: 80%;
+      border: none; }
+      nav ul.main li:hover > ul:hover {
         display: block; }
 
-  body.event nav ul.main {
-    padding-left: 40px;
-    padding-right: 40px; }
-    body.event nav ul.main li.menu-toggle a {
-      margin-right: 0; }
-
-  body#schedule .upcoming-events, body#schedule .past-events {
-    font-size: 80%; }
-    body#schedule .upcoming-events .event, body#schedule .past-events .event {
-      padding-left: 0;
-      margin-left: 0;
-      margin-right: 0; }
-
-  .page #main p {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 1em;
-    width: auto; }
-
-  .page #main blockquote {
-    margin: 0;
-    width: 100%;
-    margin-bottom: 1em; }
-
-  .page #main h2 {
-    margin-top: 0;
-    margin-bottom: 0.25em; }
-
-  #about-studio #principals {
-    display: flex;
-    font-size: 60%; }
-  #about-studio #principals .staff {
-    margin: 0;
-    grid-template: "name-title" "image" "contact" "content";
-    grid-template-columns: 300px;
-    grid-template-rows: auto auto 70px 1fr;
-    grid-gap: 0;
-    flex: 0 0 300px;
-    margin-right: 20px; }
-    #about-studio #principals .staff h3 {
-      width: 100%; }
-    #about-studio #principals .staff .name-title {
-      align-self: flex-end; }
-    #about-studio #principals .staff .contact {
-      align-self: flex-start;
-      margin-top: 1em; }
-  #about-studio #collaborators {
-    width: 100%;
-    margin: 0; }
-
-  body#seance, body#acog, body#daedalus {
-    grid-template: ". in-game-disclaimer nav ." "main main main main" "footer footer footer footer";
-    grid-template-columns: 1fr 884px 76px 1fr; }
-    body#seance #in-game-disclaimer, body#seance #out-of-game-disclaimer, body#acog #in-game-disclaimer, body#acog #out-of-game-disclaimer, body#daedalus #in-game-disclaimer, body#daedalus #out-of-game-disclaimer {
-      font-size: 60%;
-      padding: 1em 0; }
-    body#seance nav, body#acog nav, body#daedalus nav {
-      padding-right: 0;
-      display: block;
-      align-self: center; }
-    body#seance #in-game p, body#acog #in-game p, body#daedalus #in-game p {
-      width: 960px; }
-    body#seance #out-of-game, body#acog #out-of-game, body#daedalus #out-of-game {
-      width: 960px;
-      margin: 0 auto; }
-      body#seance #out-of-game p, body#seance #out-of-game ul, body#seance #out-of-game ol, body#seance #out-of-game h2, body#seance #out-of-game h3, body#acog #out-of-game p, body#acog #out-of-game ul, body#acog #out-of-game ol, body#acog #out-of-game h2, body#acog #out-of-game h3, body#daedalus #out-of-game p, body#daedalus #out-of-game ul, body#daedalus #out-of-game ol, body#daedalus #out-of-game h2, body#daedalus #out-of-game h3 {
-        width: 100%;
-        padding: 0; }
-    body#seance #out-of-game ul, body#seance #out-of-game ol, body#acog #out-of-game ul, body#acog #out-of-game ol, body#daedalus #out-of-game ul, body#daedalus #out-of-game ol {
-      padding-left: 1em; }
-      body#seance #out-of-game ul li, body#seance #out-of-game ol li, body#acog #out-of-game ul li, body#acog #out-of-game ol li, body#daedalus #out-of-game ul li, body#daedalus #out-of-game ol li {
-        margin-bottom: 0.5em; }
-    body#seance #in-game img, body#acog #in-game img, body#daedalus #in-game img {
-      width: 300px; }
-    body#seance #main .past-runs, body#seance #main .gallery, body#acog #main .past-runs, body#acog #main .gallery, body#daedalus #main .past-runs, body#daedalus #main .gallery {
-      margin: 0;
-      margin-bottom: 1em; }
-      body#seance #main .past-runs h3, body#seance #main .past-runs h4, body#seance #main .gallery h3, body#seance #main .gallery h4, body#acog #main .past-runs h3, body#acog #main .past-runs h4, body#acog #main .gallery h3, body#acog #main .gallery h4, body#daedalus #main .past-runs h3, body#daedalus #main .past-runs h4, body#daedalus #main .gallery h3, body#daedalus #main .gallery h4 {
-        margin: 0; }
-    body#seance #main .gallery .image, body#acog #main .gallery .image, body#daedalus #main .gallery .image {
-      flex: 0 0 302.6666666667px;
-      margin-right: 20px;
-      margin-bottom: 20px;
-      padding: 1px;
-      background: #000;
-      border: 1px solid #fff; }
-    body#seance #main .gallery .image:nth-child(3n), body#acog #main .gallery .image:nth-child(3n), body#daedalus #main .gallery .image:nth-child(3n) {
-      margin-right: 0; }
-
-  #lightbox #controls a {
-    width: 30px;
-    height: 30px; }
-
-  body#acog #in-game .letter {
-    width: 500px;
-    margin-bottom: -10px;
-    margin-right: 0; }
-  body#acog #in-game .badge {
-    right: 600px;
+  body#extant #masthead {
+    padding-bottom: 250px; }
+  body#extant #masthead:after {
+    background-image: url("../i/cults/extant.png");
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    bottom: -200px; }
+  body#extant div.summary {
     margin-top: 200px; }
 
-  body#daedalus nav {
-    display: flex;
-    flex-direction: row-reverse; }
-    body#daedalus nav > a.menu-toggle {
-      margin: 0 20px 0 0; }
-  body#daedalus .banner h2 {
-    padding-top: 300px; }
-  body#daedalus h3 {
-    margin-top: 1em !important; }
-  body#daedalus h4 {
-    padding-left: 0;
-    margin-bottom: 0.5em !important; } }
+  body#scions #masthead {
+    padding-bottom: 350px; }
+    body#scions #masthead h1 {
+      font-size: 180%; }
+  body#scions #masthead:after {
+    background-image: url("../i/cults/scions.png");
+    width: 300px;
+    height: 600px;
+    margin-left: -150px;
+    bottom: -300px; }
+  body#scions div.summary {
+    margin-top: 250px; }
+
+  body#mareen #masthead {
+    padding-bottom: 350px; }
+    body#mareen #masthead h1 {
+      font-size: 180%; }
+  body#mareen #masthead:after {
+    background-image: url("../i/cults/mareen.png");
+    width: 300px;
+    height: 600px;
+    margin-left: -150px;
+    bottom: -300px; }
+  body#mareen div.summary {
+    margin-top: 250px; }
+
+  body#seekers #masthead {
+    padding-bottom: 175px;
+    background-image: url("../i/cults/seekers_background.jpg"); }
+  body#seekers #masthead:after {
+    background-image: url("../i/cults/pattern_seekers.png");
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    bottom: -200px; }
+  body#seekers div.summary {
+    margin-top: 100px; }
+
+  body#progenus #masthead {
+    padding-bottom: 175px;
+    background-image: url("../i/cults/progenus_background.jpg"); }
+  body#progenus #masthead:after {
+    background-image: url("../i/cults/progenus.png");
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    bottom: -200px; }
+  body#progenus div.summary {
+    margin-top: 100px; } }

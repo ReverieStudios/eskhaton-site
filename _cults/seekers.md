@@ -1,5 +1,6 @@
 ---
 layout: cult
+title: The Pattern Seekers
 cult-name: The Pattern Seekers
 short-name: seekers
 summary: "A group of individuals tied together by alien compulsions and maddening certainties, the Pattern Seekers aim to complete their tasks, perfect their endeavors, and close the infinite, universal fractal. The same obsessions which destroy their lives also grant the Pattern Seekers terrible power."

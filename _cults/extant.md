@@ -1,5 +1,6 @@
 ---
 layout: cult
+title: The Anglesey Extant
 cult-name: The Anglesey Extant
 short-name: extant
 summary: "The Extant has survived through the ages mostly in the shadows, after their fall as the Celtic elite. Now they seek to unify the most powerful cult groupings in anticipation of return of their primal gods. Scattered to the corners of the world they have kept to their sacred rites and sanguine rituals through which their god endows them with eldritch secrets of divination, and the power to live well beyond the time of the average mortal coil. 

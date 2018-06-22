@@ -1,5 +1,6 @@
 ---
 layout: cult
+title: The Mareen
 cult-name: The Mareen
 short-name: mareen
 summary: "The Mareen are the keepers of memory and conservators of the departed. Having harnessed the primordial power of the sea, cultists to the Elder Goddess Illuket safeguard the consciousnesses of their dead, collecting them for a future purpose. A single Mareen can have upwards of twenty lives within their minds and can call on their collective wisdom at will.  "

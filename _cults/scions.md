@@ -1,5 +1,6 @@
 ---
 layout: cult
+title: Scions of Enoch
 cult-name: Scions of Enoch
 short-name: scions
 summary: "The Scions of Enoch are traditional, dedicated and obsessive, these cultists are connected by an insatiable drive to discover secrets hidden in a lost language. Scions will pursue knowledge at any cost. Members of the Scions of Enoch quickly become obsessed with matters of the occult forsaking anything else, relationships, goals and even their own well being."
