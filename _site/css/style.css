@@ -359,14 +359,13 @@ body#logistics section > h3, body#team section > h3 {
   body#logistics section > h3:before, body#logistics section > h3:after, body#team section > h3:before, body#team section > h3:after {
     content: "";
     flex: 1 0 auto;
-    height: 1px;
-    background: #f00; }
+    height: 1px; }
   body#logistics section > h3:before, body#team section > h3:before {
     margin-right: 0.5em;
-    background-image: linear-gradient(-90deg, black, #fff); }
+    background-image: linear-gradient(-90deg, black, transparent); }
   body#logistics section > h3:after, body#team section > h3:after {
     margin-left: 0.5em;
-    background-image: linear-gradient(90deg, black, #fff); }
+    background-image: linear-gradient(90deg, black, transparent); }
 body#logistics h4, body#team h4 {
   margin-bottom: 0.5em;
   font-family: "Lora", Georgia, serif;
@@ -385,16 +384,20 @@ body#logistics .collab img, body#team .collab img {
   margin-left: 0.5em; }
 body#logistics .collab h3 + p, body#team .collab h3 + p {
   margin-top: 1em; }
+body#logistics .preview img, body#team .preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+  border: 1px solid #666;
+  border-width: 1px 0; }
 
 @media screen and (max-width: 320px) {
   body {
     font-size: 18px; } }
 @media screen and (min-width: 500px) {
   body {
-    font-size: 25px; }
-
-  body#acog #in-game .letter {
-    width: 300px; } }
+    font-size: 25px; } }
 @media screen and (min-width: 600px) {
   body {
     font-size: 25px; } }
@@ -405,7 +408,11 @@ body#logistics .collab h3 + p, body#team .collab h3 + p {
     section#main p {
       padding: 0; }
     section#main ul, section#main ol {
-      margin: 0; } }
+      margin: 0; }
+
+  body#logistics .preview img {
+    padding: 1px;
+    border: 1px solid #666; } }
 @media screen and (min-width: 1025px) {
   body {
     font-size: 30px; }

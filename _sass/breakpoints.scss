@@ -16,10 +16,6 @@ $width-ipad: 600px;
 	body {
 		font-size: 25px;
 	}
-	
-	body#acog #in-game .letter {
-		width: 300px;
-	}
 }
 
 @media screen and (min-width: 600px) {
@@ -40,6 +36,13 @@ $width-ipad: 600px;
 		
 		ul, ol {
 			margin: 0;
+		}
+	}
+	
+	body#logistics {
+		.preview img {
+			padding: 1px;
+			border: 1px solid $color-text-main;
 		}
 	}
 }

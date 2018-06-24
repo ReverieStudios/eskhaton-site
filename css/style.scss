@@ -563,17 +563,16 @@ body#logistics, body#team {
 			content: "";
 			flex: 1 0 auto;
 			height: 1px;
-			background: #f00;
 		}
 		
 		&:before {
 			margin-right: 0.5em;
-			background-image: linear-gradient(-90deg, black, $color-background-main);
+			background-image: linear-gradient(-90deg, black, transparent);
 		}
 		
 		&:after {
 			margin-left: 0.5em;
-			background-image: linear-gradient(90deg, black, $color-background-main);
+			background-image: linear-gradient(90deg, black, transparent);
 		}
 	}
 	
@@ -603,6 +602,15 @@ body#logistics, body#team {
 		h3 + p {
 			margin-top: 1em;
 		}
+	}
+	
+	.preview img {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin-bottom: 1em;
+		border: 1px solid $color-text-main;
+		border-width: 1px 0;
 	}
 }
 
