@@ -10,6 +10,7 @@
 		<li>
 			<a href = "/story/">Story &amp; Cults</a>
 			<ul class = "events">
+				<li class = "story {% if page.id == "story" %} active{% endif %}"><a href = "/story/">Story</a></li>
 				{% assign cults = site.cults | sort: 'order' %}
 				{% for c in cults %}
 				<li {% if page.short-name == {{c.short-name}} || page.id == {{c.short-name}} %}class = "active"{% endif %}><a href = "/story/{{c.short-name}}/">{{c.cult-name}}</a></li>
