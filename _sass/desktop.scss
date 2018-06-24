@@ -26,8 +26,6 @@ $color-menu: rgba(73, 73, 73, 1);
 			display: none;
 		}
 		
-
-		
 		ul.main {
 			position: relative;
 			height: auto;
@@ -74,8 +72,6 @@ $color-menu: rgba(73, 73, 73, 1);
 				margin: 0;
 				padding: 0.5em 1em;
 			}
-			
-			
 			
 			li:hover {
 				background: rgba(0, 0, 0, 0.3);
@@ -215,5 +211,10 @@ $color-menu: rgba(73, 73, 73, 1);
 			margin-top: 100px;
 		}
 	}
-
+	
+	section#media img {
+		padding: 1px;
+		border-width: 1px;
+	}
 }
+

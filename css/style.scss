@@ -196,7 +196,7 @@ section > ul, section > ol {
 	font-size: 70%;
 	
 	li {
-		margin-left: $space-gutter * 1.5;
+		margin-left: 1em;
 		margin-bottom: 0.5em;
 	}
 }
@@ -610,6 +610,17 @@ body#logistics, body#team {
 		height: auto;
 		margin-bottom: 1em;
 		border: 1px solid $color-text-main;
+		border-width: 1px 0;
+	}
+}
+
+section#media {
+	img {
+		display: block;	
+		width: 100%;
+		height: auto;
+		border: 1px solid $color-text-main;
+		padding: 0;
 		border-width: 1px 0;
 	}
 }
