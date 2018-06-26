@@ -1,0 +1,20 @@
+- name: site_photos
+  images:
+  - thumb: /i/site_photos/20180414_131851_th.jpg
+    full: /i/site_photos/20180414_131851_full.jpg
+  - thumb: /i/site_photos/20180414_125229_th.jpg
+    full: /i/site_photos/20180414_125229_full.jpg
+  - thumb: /i/site_photos/20180414_125836_th.jpg
+    full: /i/site_photos/20180414_125836_full.jpg
+  - thumb: /i/site_photos/20180414_125953_th.jpg
+    full: /i/site_photos/20180414_125953_full.jpg
+  - thumb: /i/site_photos/20180414_130432_th.jpg
+    full: /i/site_photos/20180414_130432_full.jpg
+  - thumb: /i/site_photos/20180414_131253_th.jpg
+    full: /i/site_photos/20180414_131253_full.jpg
+  - thumb: /i/site_photos/20180414_130851_th.jpg
+    full: /i/site_photos/20180414_130851_full.jpg
+  - thumb: /i/site_photos/20180414_131814_th.jpg
+    full: /i/site_photos/20180414_131814_full.jpg
+  
+  

@@ -26,6 +26,22 @@ title: Logistics
 		</address>
 		
 		<img src = "/i/squantum.jpg" / >
+		
+		{% assign site_gallery = site.data.galleries | where: "name", "site_photos" %}
+		<div class = "gallery">
+		{% for i in site_gallery[0].images %}
+		
+		{% assign next_image = forloop.index %}
+		{% if include.e.gallery[next_image] == nil %}
+			{% assign next_image = 0 %}
+		{% endif %}
+		
+			<div class = "image" data-image-num = {{forloop.index0}} data-image-next = "{{site_gallery[0].images[next_image].full}}">
+				<a href = "{{i.full}}"><img src = "{{i.thumb}}" /></a>
+			</div>
+		
+		{% endfor %}
+		</div>
 	</div>
 
 </section>
@@ -77,4 +93,26 @@ title: Logistics
 	<p>Meal selections will include vegetarian, Gluten-Free and vegan options (specific dietary requests can also be noted as part of the participant application). </p>
 	
 </section>
+
+<section id = "more">
+	<h3>Further Questions</h3>
+	
+	<p>Any questions you have about event logistics not covered here should be addressed to <a href = "mailto:hello@eskhatonlarp.com?subject=Eskhaton Logistics">hello@eskhatonlarp.com</a>.</p>
+</section>
+
+<div id = "lightbox">
+		<div id = "controls">
+			<a href = "#" class = "prev">prev</a>
+			<a href = "#" class = "close">close</a>
+			<a href = "#" class = "next">next</a>
+		</div>
+		
+		<div class = "content">
+			
+		</div>
+		
+		<div class = "caption">
+			
+		</div>
+</div>
 

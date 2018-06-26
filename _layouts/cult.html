@@ -12,7 +12,7 @@
 
 	<hr />
 
-	<h3>Diety &mdash; {{page.god-name}}</h3>
+	<h3>Deity &mdash; {{page.god-name}}</h3>
 
 	{{page.god-description | markdownify}}
 
@@ -23,6 +23,23 @@
 	<h3>{{page.god-name}} Mythos</h3>
 
 	{{page.god-mythos | markdownify}}
+	
+	<hr />
+	
+	{% if page.short-name == 'scions' %}
+	
+	<p>Want to join the cult of the {{page.cult-name}}? Spots will fill up quickly&mdash;don't wait to apply!</p>
+	
+	{% else %}
+	
+	<p>Want to join the cult of {{page.cult-name}}? Spots will fill up quickly&mdash;don't wait to apply!</p>
+	
+	{% endif %}
+	
+	
+	<div class = "apply-now">
+		<a class = "apply-now" href = "/apply/">Apply Now</a>
+	</div>
 
 </section>
 

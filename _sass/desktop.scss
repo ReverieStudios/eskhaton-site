@@ -3,7 +3,7 @@
 // Break point for iPhone SE?
 // First break point: > 500px
 
-$width-desktop: 960px;
+$width-desktop: 660px;
 $grid-gutter: 20px;
 $color-menu: rgba(73, 73, 73, 1);
 
@@ -215,6 +215,26 @@ $color-menu: rgba(73, 73, 73, 1);
 	section#media img {
 		padding: 1px;
 		border-width: 1px;
+	}
+	
+	.gallery {
+	
+	margin: 0;
+	
+	.image {
+		flex: 0 0 ($width-desktop - ($grid-gutter * 2)) / 3;
+		margin-right: $grid-gutter;
+		
+	}
+	
+	.image:nth-child(3n) {
+		margin-right: 0;
+	}
+}
+
+	#lightbox #controls a {
+		width: 30px;
+		height: 30px;
 	}
 }
 
