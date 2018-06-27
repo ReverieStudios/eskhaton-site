@@ -14,6 +14,11 @@ body#home {
   display: grid;
   grid-template: "nav" "masthead" "main" "footer"; }
 
+section#intro iframe {
+  width: 100vw;
+  height: 56.25vw;
+  margin-bottom: 1em; }
+
 nav {
   grid-area: nav;
   padding: 4vw 4vw 4vw 0;
@@ -59,10 +64,10 @@ nav {
     nav ul.main li a {
       border: none;
       color: #8c8c8c; }
-    nav ul.main li.active a {
+    nav ul.main li.active > a {
       color: #000;
       font-weight: bold; }
-    nav ul.main ul.events, nav ul.main ul.about {
+    nav ul.main ul {
       margin-left: 0.5em;
       margin-top: 0.5em;
       padding-left: 0.5em;
@@ -122,11 +127,12 @@ p {
   font-size: 70%; }
 
 section > ul, section > ol {
-  margin: 0 4vw 1em 4vw;
-  font-size: 70%; }
+  margin: 0 4vw 1em 4vw; }
   section > ul li, section > ol li {
     margin-left: 1em;
     margin-bottom: 0.5em; }
+    section > ul li p, section > ol li p {
+      padding: 0; }
 
 hr {
   display: relative;
@@ -350,34 +356,36 @@ body#story div.scions div.learn-more a {
 body#story div.seekers div.learn-more a {
   background-color: #ccaa2f; }
 
-body#logistics section h3, body#team section h3 {
+body#logistics section h3, body#team section h3, body#rules-of-play section h3, body#code-of-conduct section h3 {
   font-family: "Lora", Georgia, serif;
   font-weight: normal;
   font-size: 100%;
   color: #000; }
-body#logistics section > h3, body#team section > h3 {
+body#logistics section > h3, body#team section > h3, body#rules-of-play section > h3, body#code-of-conduct section > h3 {
   display: flex;
   align-items: center;
   margin-bottom: 0.5em; }
-  body#logistics section > h3:before, body#logistics section > h3:after, body#team section > h3:before, body#team section > h3:after {
+  body#logistics section > h3:before, body#logistics section > h3:after, body#team section > h3:before, body#team section > h3:after, body#rules-of-play section > h3:before, body#rules-of-play section > h3:after, body#code-of-conduct section > h3:before, body#code-of-conduct section > h3:after {
     content: "";
     flex: 1 0 auto;
     height: 1px; }
-  body#logistics section > h3:before, body#team section > h3:before {
+  body#logistics section > h3:before, body#team section > h3:before, body#rules-of-play section > h3:before, body#code-of-conduct section > h3:before {
     margin-right: 0.5em;
     background-image: linear-gradient(-90deg, black, transparent); }
-  body#logistics section > h3:after, body#team section > h3:after {
+  body#logistics section > h3:after, body#team section > h3:after, body#rules-of-play section > h3:after, body#code-of-conduct section > h3:after {
     margin-left: 0.5em;
     background-image: linear-gradient(90deg, black, transparent); }
-body#logistics h4, body#team h4 {
+body#logistics h4, body#team h4, body#rules-of-play h4, body#code-of-conduct h4 {
   margin-bottom: 0.5em;
   font-family: "Lora", Georgia, serif;
   font-weight: normal; }
-body#logistics address, body#team address {
+body#logistics h1 + h3, body#team h1 + h3, body#rules-of-play h1 + h3, body#code-of-conduct h1 + h3 {
+  margin-top: 0.5em; }
+body#logistics address, body#team address, body#rules-of-play address, body#code-of-conduct address {
   font-size: 80%;
   text-align: center;
   margin-bottom: 1em; }
-body#logistics .collab img, body#team .collab img {
+body#logistics .collab img, body#team .collab img, body#rules-of-play .collab img, body#code-of-conduct .collab img {
   width: 33%;
   height: auto;
   padding: 1px;
@@ -385,9 +393,9 @@ body#logistics .collab img, body#team .collab img {
   display: block;
   float: right;
   margin-left: 0.5em; }
-body#logistics .collab h3 + p, body#team .collab h3 + p {
+body#logistics .collab h3 + p, body#team .collab h3 + p, body#rules-of-play .collab h3 + p, body#code-of-conduct .collab h3 + p {
   margin-top: 1em; }
-body#logistics .preview > img, body#team .preview > img {
+body#logistics .preview > img, body#team .preview > img, body#rules-of-play .preview > img, body#code-of-conduct .preview > img {
   display: block;
   width: 100%;
   height: auto;
@@ -486,6 +494,11 @@ section#media img {
   body {
     font-size: 25px; } }
 @media screen and (min-width: 768px) {
+  section#intro iframe {
+    width: 660px;
+    height: 371.25px;
+    margin-bottom: 1em; }
+
   section#main {
     width: 660px;
     margin: 0 auto; }

@@ -49,6 +49,12 @@ body#home {
 	"footer";
 }
 
+section#intro iframe {
+	width: 100vw;
+	height: 56.25vw;
+	margin-bottom: 1em;
+}
+
 nav {
 	grid-area: nav;
 	padding: $space-gutter $space-gutter $space-gutter 0;
@@ -107,12 +113,12 @@ nav {
 			color: $color-text-menu;
 		}
 		
-		li.active a {
+		li.active > a {
 			color: #000;
 			font-weight: bold;
 		}
 		
-		ul.events, ul.about {
+		ul {
 			margin-left: 0.5em;
 			margin-top: 0.5em;
 			padding-left: 0.5em;
@@ -197,11 +203,14 @@ p {
 
 section > ul, section > ol {
 	margin: 0 $space-gutter 1em $space-gutter;
-	font-size: 70%;
 	
 	li {
 		margin-left: 1em;
 		margin-bottom: 0.5em;
+		
+		p {
+			padding: 0;
+		}
 	}
 }
 
@@ -549,7 +558,7 @@ body#story {
 	}
 }
 
-body#logistics, body#team {
+body#logistics, body#team, body#rules-of-play, body#code-of-conduct {
 	
 	section h3 {
 		font-family: $text-main;
@@ -584,6 +593,10 @@ body#logistics, body#team {
 		margin-bottom: 0.5em;
 		font-family: $text-main;
 		font-weight: normal;
+	}
+	
+	h1 + h3 {
+		margin-top: 0.5em;
 	}
 	
 	address {

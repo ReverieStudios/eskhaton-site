@@ -17,7 +17,15 @@
 				{% endfor %}
 			</ul>
 		</li>
-		<li {% if page.id == "logistics" %}class = "active"{% endif %}><a href = "/logistics/">Logistics</a></li>
+		<li {% if page.id == "logistics" %}class = "active"{% endif %}>
+		<a href = "/logistics/">Logistics</a>
+		<ul class = "sub-logistics">
+			<li {% if page.id == "rules-of-play" %}class = "active"{% endif %}><a href = "/logistics/rules-of-play/">Rules of Play</a></li>
+			<li {% if page.id == "code-of-conduct" %}class = "active"{% endif %}><a href = "/logistics/code-of-conduct/">Code of Conduct</a></li>
+		</ul>
+		
+		</li>
+		
 		<li {% if page.id == "team" %}class = "active"{% endif %}><a href = "/team/">Team</a></li>
 		<li {% if page.id == "contact" %}class = "active"{% endif %}><a href = "/contact/">Contact</a></li>
 	</ul>
