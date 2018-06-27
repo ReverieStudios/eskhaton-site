@@ -548,7 +548,7 @@ section#media img {
         margin-bottom: 0;
         position: relative;
         padding: 0.5em 0.25em 0.5em 0.25em; }
-        nav ul.main li.active a {
+        nav ul.main li.active > a {
           color: #fff; }
       nav ul.main li.apply {
         padding-right: 0; }
