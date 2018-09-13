@@ -280,18 +280,18 @@ body#extant #masthead:after {
 body#extant div.summary {
   margin-top: 20vw; }
 
-body#scions #masthead {
-  background-image: url("../i/cults/scions_background.jpg");
+body#expositors #masthead {
+  background-image: url("../i/cults/expositors_background.jpg");
   padding-bottom: 25vw; }
-  body#scions #masthead h1 {
-    font-size: 180%; }
-body#scions #masthead:after {
-  background-image: url("../i/cults/scions.png");
+  body#expositors #masthead h1 {
+    font-size: 140%; }
+body#expositors #masthead:after {
+  background-image: url("../i/cults/expositors.png");
   width: 40vw;
   height: 40vw;
   margin-left: -20vw;
   bottom: -20vw; }
-body#scions div.summary {
+body#expositors div.summary {
   margin-top: 20vw; }
 
 body#mareen #masthead {
@@ -330,8 +330,8 @@ body#story div.cult-desc.progenus p:before {
   background: transparent url("../i/cults/progenus.png") center center no-repeat;
   background-size: contain;
   height: 75px; }
-body#story div.cult-desc.scions p:before {
-  background: transparent url("../i/cults/scions.png") center center no-repeat;
+body#story div.cult-desc.expositors p:before {
+  background: transparent url("../i/cults/expositors.png") center center no-repeat;
   background-size: contain;
   height: 150px; }
 body#story div.cult-desc.seekers p:before {
@@ -351,7 +351,7 @@ body#story div.mareen div.learn-more a {
   background-color: #385fba; }
 body#story div.progenus div.learn-more a {
   background-color: #627881; }
-body#story div.scions div.learn-more a {
+body#story div.expositors div.learn-more a {
   background-color: #922c1e; }
 body#story div.seekers div.learn-more a {
   background-color: #ccaa2f; }
@@ -683,17 +683,17 @@ form {
   body#extant div.summary {
     margin-top: 200px; }
 
-  body#scions #masthead {
+  body#expositors #masthead {
     padding-bottom: 350px; }
-    body#scions #masthead h1 {
+    body#expositors #masthead h1 {
       font-size: 180%; }
-  body#scions #masthead:after {
-    background-image: url("../i/cults/scions.png");
+  body#expositors #masthead:after {
+    background-image: url("../i/cults/expositors.png");
     width: 300px;
     height: 600px;
     margin-left: -150px;
     bottom: -300px; }
-  body#scions div.summary {
+  body#expositors div.summary {
     margin-top: 250px; }
 
   body#mareen #masthead {

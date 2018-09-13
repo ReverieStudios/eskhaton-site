@@ -427,18 +427,18 @@ body#extant {
 	}
 }
 
-body#scions {
+body#expositors {
 	#masthead {
-		background-image: url('../i/cults/scions_background.jpg');
+		background-image: url('../i/cults/expositors_background.jpg');
 		padding-bottom: 25vw;
 		
 		h1 {
-			font-size: 180%;
+			font-size: 140%;
 		}
 	}
 	
 	#masthead:after {
-		background-image: url('../i/cults/scions.png');
+		background-image: url('../i/cults/expositors.png');
 		width: 40vw;
 		height: 40vw;
 		margin-left: -20vw;
@@ -512,8 +512,8 @@ body#story {
 			height: 75px;
 		}
 		
-		&.scions p:before {
-			background: transparent url('../i/cults/scions.png') center center no-repeat;
+		&.expositors p:before {
+			background: transparent url('../i/cults/expositors.png') center center no-repeat;
 			background-size: contain;
 			height: 150px;
 		}
@@ -549,7 +549,7 @@ body#story {
 		background-color: #627881;
 	}
 	
-	div.scions div.learn-more a {
+	div.expositors div.learn-more a {
 		background-color: #922c1e;
 	}
 	
