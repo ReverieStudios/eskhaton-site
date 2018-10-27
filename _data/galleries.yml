@@ -16,5 +16,19 @@
     full: /i/site_photos/20180414_130851_full.jpg
   - thumb: /i/site_photos/20180414_131814_th.jpg
     full: /i/site_photos/20180414_131814_full.jpg
+- name: hotel
+  images:
+    - thumb: /i/accommodations/hotel_king.png
+      full: /i/accommodations/hotel_king.png
+    - thumb: /i/accommodations/hotel_double.png
+      full: /i/accommodations/hotel_double.png 
+- name: food
+  images:
+    - thumb: /i/accommodations/food1.jpg
+      full: /i/accommodations/food1.jpg
+    - thumb: /i/accommodations/food2.jpg
+      full: /i/accommodations/food2.jpg
+    - thumb: /i/accommodations/food3.jpg
+      full: /i/accommodations/food3.jpg
   
   

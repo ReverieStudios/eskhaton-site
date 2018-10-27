@@ -369,36 +369,36 @@ body#story div.expositors div.learn-more a {
 body#story div.seekers div.learn-more a {
   background-color: #ccaa2f; }
 
-body#logistics section h3, body#team section h3, body#rules-of-play section h3, body#code-of-conduct section h3 {
+body#logistics section h3, body#team section h3, body#rules-of-play section h3, body#code-of-conduct section h3, body#schedule section h3, body#venue section h3, body#accommodations section h3 {
   font-family: "Lora", Georgia, serif;
   font-weight: normal;
   font-size: 100%;
   color: #000; }
-body#logistics section > h3, body#team section > h3, body#rules-of-play section > h3, body#code-of-conduct section > h3 {
+body#logistics section > h3, body#team section > h3, body#rules-of-play section > h3, body#code-of-conduct section > h3, body#schedule section > h3, body#venue section > h3, body#accommodations section > h3 {
   display: flex;
   align-items: center;
   margin-bottom: 0.5em; }
-  body#logistics section > h3:before, body#logistics section > h3:after, body#team section > h3:before, body#team section > h3:after, body#rules-of-play section > h3:before, body#rules-of-play section > h3:after, body#code-of-conduct section > h3:before, body#code-of-conduct section > h3:after {
+  body#logistics section > h3:before, body#logistics section > h3:after, body#team section > h3:before, body#team section > h3:after, body#rules-of-play section > h3:before, body#rules-of-play section > h3:after, body#code-of-conduct section > h3:before, body#code-of-conduct section > h3:after, body#schedule section > h3:before, body#schedule section > h3:after, body#venue section > h3:before, body#venue section > h3:after, body#accommodations section > h3:before, body#accommodations section > h3:after {
     content: "";
     flex: 1 0 auto;
     height: 1px; }
-  body#logistics section > h3:before, body#team section > h3:before, body#rules-of-play section > h3:before, body#code-of-conduct section > h3:before {
+  body#logistics section > h3:before, body#team section > h3:before, body#rules-of-play section > h3:before, body#code-of-conduct section > h3:before, body#schedule section > h3:before, body#venue section > h3:before, body#accommodations section > h3:before {
     margin-right: 0.5em;
     background-image: linear-gradient(-90deg, black, transparent); }
-  body#logistics section > h3:after, body#team section > h3:after, body#rules-of-play section > h3:after, body#code-of-conduct section > h3:after {
+  body#logistics section > h3:after, body#team section > h3:after, body#rules-of-play section > h3:after, body#code-of-conduct section > h3:after, body#schedule section > h3:after, body#venue section > h3:after, body#accommodations section > h3:after {
     margin-left: 0.5em;
     background-image: linear-gradient(90deg, black, transparent); }
-body#logistics h4, body#team h4, body#rules-of-play h4, body#code-of-conduct h4 {
+body#logistics h4, body#team h4, body#rules-of-play h4, body#code-of-conduct h4, body#schedule h4, body#venue h4, body#accommodations h4 {
   margin-bottom: 0.5em;
   font-family: "Lora", Georgia, serif;
   font-weight: normal; }
-body#logistics h1 + h3, body#team h1 + h3, body#rules-of-play h1 + h3, body#code-of-conduct h1 + h3 {
+body#logistics h1 + h3, body#team h1 + h3, body#rules-of-play h1 + h3, body#code-of-conduct h1 + h3, body#schedule h1 + h3, body#venue h1 + h3, body#accommodations h1 + h3 {
   margin-top: 0.5em; }
-body#logistics address, body#team address, body#rules-of-play address, body#code-of-conduct address {
+body#logistics address, body#team address, body#rules-of-play address, body#code-of-conduct address, body#schedule address, body#venue address, body#accommodations address {
   font-size: 80%;
   text-align: center;
   margin-bottom: 1em; }
-body#logistics .collab img, body#team .collab img, body#rules-of-play .collab img, body#code-of-conduct .collab img {
+body#logistics .collab img, body#team .collab img, body#rules-of-play .collab img, body#code-of-conduct .collab img, body#schedule .collab img, body#venue .collab img, body#accommodations .collab img {
   width: 33%;
   height: auto;
   padding: 1px;
@@ -406,9 +406,9 @@ body#logistics .collab img, body#team .collab img, body#rules-of-play .collab im
   display: block;
   float: right;
   margin-left: 0.5em; }
-body#logistics .collab h3 + p, body#team .collab h3 + p, body#rules-of-play .collab h3 + p, body#code-of-conduct .collab h3 + p {
+body#logistics .collab h3 + p, body#team .collab h3 + p, body#rules-of-play .collab h3 + p, body#code-of-conduct .collab h3 + p, body#schedule .collab h3 + p, body#venue .collab h3 + p, body#accommodations .collab h3 + p {
   margin-top: 1em; }
-body#logistics .preview > img, body#team .preview > img, body#rules-of-play .preview > img, body#code-of-conduct .preview > img {
+body#logistics .preview > img, body#team .preview > img, body#rules-of-play .preview > img, body#code-of-conduct .preview > img, body#schedule .preview > img, body#venue .preview > img, body#accommodations .preview > img {
   display: block;
   width: 100%;
   height: auto;
