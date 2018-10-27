@@ -229,7 +229,7 @@ a {
 	border-bottom: 1px solid $color-link-main;
 }
 
-div.apply-now, div.learn-more {
+div.button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -241,27 +241,26 @@ div.apply-now, div.learn-more {
 		position: relative;
 		font-family: $text-aux;
 		border: none;
-		color: $color-apply-foreground;
-		background: $color-apply-background;
 		border-radius: 200px;
 		padding: 0.4em 0.8em 0.4em 0.8em;
 		text-transform: uppercase;
 		flex: 0 0 auto;
 		font-weight: bold;
+
+	}
+}
+
+div.apply-now, div.learn-more {
+	
+	a {
+		color: $color-apply-foreground;
+		background: $color-apply-background;
 	}
 }
 
 a.about-more {
-	display: inline-block;
-	position: relative;
-	font-family: $text-aux;
-	border: none;
 	color: mix($color-background-main, $color-text-main, 75);
 	background: $color-text-main;
-	border-radius: 200px;
-	padding: 0.4em 2em 0.4em 0.8em;
-	text-transform: uppercase;
-	flex: 0 0 auto;
 	
 	
 	&:after {
@@ -276,6 +275,28 @@ a.about-more {
 		width: 15px;
 		height: 15px;
 		margin-left: 5px;
+	}
+}
+
+div.button a.guide {
+	color: white;
+	//width: 70%;
+	background: #6d6751 url('../i/download_white_pos.png') left center no-repeat;
+	background-size: 1em 1em;
+	background-position: 0.5em center;
+	padding-left: 2em;
+	padding-right: 2.5em;
+	
+	&:after {
+		content: " ";
+		position: absolute;
+		top: 50%;
+		margin-top: -1.75em;
+		right: -0.25em;
+		width: 3em;
+		height: 3em;
+		background: transparent url('../i/participant_guide.png') center center no-repeat;
+		background-size: contain;
 	}
 }
 
@@ -876,7 +897,6 @@ form {
 	input[type=submit] {
 		background: #44d961;
 		display: block;
-		width: 50%;
 		margin: 0 auto;
 		padding: 1em;
 		border: none;
